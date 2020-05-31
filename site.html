@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=Shift-JIS">
+    <title>投稿</title>
+</head>
+<body>
+    <form action="site.php" method="post">
+        <p>名前<input type="name" name="name"></p>
+        <p>職業
+            <select name="job">
+                <option value="初心者">初心者</option>
+                <option value="中級者">中級者</option>
+　　　　　　　　　<option value="上級者">上級者</option>
+            </select>
+        </p>
+        <p>本文</p>
+        <p><textarea name="text" cols="30" rows="10"></textarea></p>
+        <input type="submit" value="送信">
+    </form>
+</body>
+</html>
