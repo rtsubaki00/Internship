@@ -8,12 +8,23 @@
     <script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
 </head>
 <body>
-    <div class="col-5">
-        <textarea ></textarea>
-        <script>
-            var easyEMD = new EasyMDE();
-        </script>
-    </div>
+
+    <form action="question.php" method="POST">
+        
+        <div class="form-group col-5 mb-3">
+             <label for="formGroupExampleInput">題名</label>
+             <input name="title" type="text" class="form-control" placeholder="題名">
+        </div>
+     
+    
+        <div class="col-5">
+            <textarea name="text"></textarea>
+            <script>
+                var easyEMD = new EasyMDE();
+            </script>
+        </div>
+    </form>
+
  
 </body>
 </html>
