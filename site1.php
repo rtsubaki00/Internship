@@ -6,50 +6,22 @@
     <title>質問</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/easymde/dist/easymde.min.css">
-    <script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
+    
 </head>
 <body>
 
-    <form action="site.php" method="POST">
+    <form action="site2.php" method="POST">
 
-        <div class="form-group col-5">
-            <label for="formGroupExampleInput">名前</label>
+     <div class="form-group col-5">
             <input  name="name" type="text" class="form-control" placeholder="名前">
+     </div>
 
-        </div>
-
-        <div class= "form-group m-3 row">
-          学習レベル
-
-          
-            <label>
-              <input  name="job" type="radio" value="option1">
-              初級
-            </label>
      
+      <div class="col-5">
+          <textarea name="body" class="form-control" rows="5" placeholder="本文"></textarea>　　
+     </div>
 
-          
-            <label>
-              <input  name="job" type="radio" value="option2">
-              中級
-            </label>
-         
-
-          
-            <label>
-              <input  name="job" type="radio" value="option3"> 
-             上級
-            </label>
-
-        </div>
-     
-          <div class="col-5">
-          <textarea  name="text"></textarea>　　　
-          <script>
-            var easyEMD = new EasyMDE();
-          </script>
-     
-          </div>
+      
 
 
           <button type="submit" class="btn btn-primary ml-3">投稿</button>
