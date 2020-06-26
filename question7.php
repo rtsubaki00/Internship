@@ -1,4 +1,4 @@
-<!-- question4.phpに戻るだけ -->
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -9,7 +9,7 @@
 </head>
 <body>
     <p>登録完了</p>
-    <!-- ここで内容をquestion1.phpのIDに送る　618 -->
+   
     <form action="question4.php" method="get">
         <button type="submit" class="btn btn-primary ml-3">一覧に戻る</button>
     </form>
@@ -54,7 +54,5 @@ try{
 }
 
 
-// 質問に戻る　616
-// question5.phpを作って質問と回答が同時に見えるようにする
-// question5.phpから一覧に戻るボタン作成　
+
 ?>

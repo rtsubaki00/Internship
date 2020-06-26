@@ -34,11 +34,8 @@ foreach($message as $mes){
 
 ?>
 
-<!-- DBから引っ張ってくる 616-->
-<!-- DBから引っ張ってきたのをIDに入れる 616-->
 
 
-<!-- パラメータに文章付けたらいいんじゃない？　619 -->
 <p>No.<?php echo $mes["id"]; ?>
   <a href="question5.php?id=<?php echo $mes["id"]; ?>&body=<?php echo $mes["body"]; ?>">
  <?php echo $mes["body"]; ?></p>
@@ -53,7 +50,6 @@ foreach($message as $mes){
 }
 ?>
 
-<!-- 質問する人はこちらよ -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>

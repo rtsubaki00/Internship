@@ -1,4 +1,3 @@
-<!-- 質問フォーム　618 -->
 
 <!DOCTYPE html>
 <html lang="ja">

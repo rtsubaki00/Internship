@@ -1,5 +1,4 @@
-<!-- question5.phpから受け取ったデータを表示 -->
-<!-- DBへ繋げてtextに挿入 -->
+
 <?php
 $body = $_GET["body"];
 echo $body;
@@ -15,8 +14,7 @@ echo $body;
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-   
-    <!-- ここで内容をquestion1.phpのIDに送る　618 -->
+
     <form action="question7.php" method="get">
         <button type="submit" class="btn btn-primary ml-3">登録する！</button>
         <input type="hidden" name="question_id" value="<?php echo $id ?>">
@@ -60,7 +58,5 @@ try{
 }
 
 
-// 質問に戻る　616
-// question5.phpを作って質問と回答が同時に見えるようにする
-// question5.phpから一覧に戻るボタン作成　
+
 ?>

@@ -1,6 +1,4 @@
-<!-- DBに接続・挿入　618 -->
-<!-- question1.phpで選んだIDと同じIDの中に挿入 -->
-<!-- このページでIDを与える？　618 -->
+
 <?php
 
 session_start();
@@ -25,9 +23,6 @@ try{
 
 $stmt -> execute();
 
-// 質問に戻る　616
-// question5.phpを作って質問と回答が同時に見えるようにする
-// question5.phpから一覧に戻るボタン作成　
 
 
 ?>
@@ -44,7 +39,7 @@ $stmt -> execute();
 </head>
 <body>
     <h2>登録完了</h2>
-    <!-- ここで内容をquestion1.phpのIDに送る　618 -->
+
     <form action="question4.php" method="get">
         <button type="submit" class="btn btn-primary ml-3">一覧に戻る</button>
     </form>

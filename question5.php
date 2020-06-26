@@ -1,6 +1,4 @@
-<!-- question4.phpで選んだ質問を表示 -->
-<!-- 回答欄を作りquestion6.phpへ送る -->
-<!-- question6.phpでtextに入れた情報を取り出す -->
+
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -41,7 +39,7 @@
 
 
 
-<!-- ここでtextに入っている文章を表示させる -->
+
 <?php 
 
 
@@ -75,11 +73,9 @@ die();
 }
 //接続を閉じる
 $dbh = null;
-//データ表示
 
-// foreach($message as $mes){ echo $mes["id"];}
 
-// IDが１だったら１に入っている文章を取り出す
+
 ?>
 
 <?php
