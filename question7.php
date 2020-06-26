@@ -18,3 +18,43 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
+
+<?php 
+$id = $_GET['question_id'];
+$body= $_GET['question_body'];
+?>
+
+<?php
+error_reporting(E_ALL);
+
+
+$dsn = 'mysql:host=localhost; dbname=hellohhelo; charset=utf8';
+$user = 'hellouser';
+$password = 'rpass';
+
+
+
+try{
+    $db = new PDO($dsn, $user, $password);
+
+
+    
+    $sql = "INSERT INTO `answer`(`id`, `body`) VALUES (".$id." , '".$body."')";
+   
+    
+    
+
+     $stmt = $db -> prepare($sql);
+
+ 
+     $stmt -> execute();
+    
+} catch (PDOException $e) {
+    exit ('エラー:' .$e -> getMessage());
+}
+
+
+// 質問に戻る　616
+// question5.phpを作って質問と回答が同時に見えるようにする
+// question5.phpから一覧に戻るボタン作成　
+?>

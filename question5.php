@@ -16,6 +16,7 @@
    
     <?php 
     $id = $_GET["id"];
+    $body = $_GET['body'];
     echo $_GET['body'];
 ?>
 
@@ -52,14 +53,17 @@ try{
 //データベースへ接続する
 $pdo = new PDO($dsn, $user, $password);
 // SQL作成
-$id = $_GET["id"];
-$sql = "SELECT * FROM  answer WHERE answer_id WHERE $id;";
+
+$sql = "SELECT body,answer_id FROM  answer WHERE id = ?";
 $stmt = $pdo->prepare($sql);
+
+$stmt->bindValue(1, $id, PDO::PARAM_STR);
+
 $stmt->execute();
 
 //データの取得
 while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
-echo $result;
+$message[] = $result;
 }
 
 //もしエラーが発生した時にエラーを表示する
@@ -76,9 +80,16 @@ $dbh = null;
 // foreach($message as $mes){ echo $mes["id"];}
 
 // IDが１だったら１に入っている文章を取り出す
-
-
-
-
-
 ?>
+
+<?php
+foreach($message as $mes){
+    ?>
+    <p>No. <?php echo $mes['answer_id'];?>
+
+    <?php
+    echo $mes['body']; 
+    ?>
+    <br></p>
+    <?php
+} ?>
