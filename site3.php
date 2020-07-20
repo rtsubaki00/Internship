@@ -39,6 +39,17 @@ $stmt -> execute();
 <html lang="ja">
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- Third party plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
 <meta charset="utf-8">
 <title>ユーザー登録フォーム・登録ページ</title>
 <style>
@@ -49,9 +60,13 @@ p {
 </head>
 
 <body>
-<p>ご登録ありがとうございました。</p>
+<p class="text-center mt-4">ご登録ありがとうございました。</p>
 <form action="site1.php" method="post">
- <button type="submit" class="btn btn-primary ml-3">トップページへ戻る</button>
+
+<div class="text-center">
+  <button type="submit" class="btn btn-info ml-3">トップページに戻る</button>
+</div>
+ 
 </form>
 
 

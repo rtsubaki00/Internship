@@ -7,29 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>確認フォーム</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <!-- Favicon-->
+      <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- Third party plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body> 
-    <h2>質問文</h2>
+    <h2 class="text-center">質問文</h2>
    
    
     <?php 
     $id = $_GET["id"];
+    ?>
+    <div class="text-center">
+    <?php
     $body = $_GET['body'];
     echo $_GET['body'];
-?>
+     ?>
+    </div>
 
    
 
 
     <form action="question6.php" method="get">
-    　<h2>回答する:</h2>
+    　<h2 class="text-center">回答する:</h2>
 
-    <div class="col-5">
+    <div class="text-center mx-auto" style="width: 50%">
           <textarea name="body" class="form-control" rows="5" placeholder="本文"></textarea>　　
+        </div>
           <input type="hidden" name="question_id" value="<?php echo $id ?>">
-     </div>
 
-    <button type="submit" class="btn btn-primary ml-3">送信</button>
+          <div class="text-center">
+              <button type="submit" class="btn btn-info ml-3">送信</button>
+          </div>
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -78,9 +95,14 @@ $dbh = null;
 
 ?>
 
+<div class="text-center">
 <?php
+    if(empty($message)){
+        echo "回答がありません";
+    }else{
 foreach($message as $mes){
     ?>
+
     <p>No. <?php echo $mes['answer_id'];?>
 
     <?php
@@ -88,4 +110,8 @@ foreach($message as $mes){
     ?>
     <br></p>
     <?php
+    }
 } ?>
+</div>
+
+
